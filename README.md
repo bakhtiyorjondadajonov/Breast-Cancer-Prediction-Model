@@ -1,15 +1,45 @@
-# Breast-Cancer-Prediction-Model
+## **Breast Cancer Analyzer**
 
-## Project Description
-This project provides a machine learning solution for predicting breast cancer using a neural network built with TensorFlow. The model predicts whether a breast cancer tumor is malignant or benign based on features extracted from digitized images of fine needle aspirates (FNAs) of breast masses. The dataset used is the **Breast Cancer Wisconsin Dataset**, a well-known dataset available in Scikit-learn.
-## Key Features
-- **Data Handling and Preprocessing**: The dataset is standardized using Scikit-learn's `StandardScaler` to ensure uniform feature contributions during model training.
-- **Model Architecture**: A neural network is constructed using TensorFlow, designed to perform binary classification.
-- **Training and Evaluation**: The model is trained on a subset of the dataset and evaluated on a separate test set to measure its performance.
+### **Project Description**
 
-## TensorFlow Implementation
-TensorFlow is used to build, train, and evaluate the neural network, with features such as Dense layers, activation functions (e.g., ReLU, Sigmoid), and optimizers (e.g., Adam) being utilized.
+This AI model is designed to analyze breast cancer data and classify tumors as **benign** or **malignant** based on medical features. The dataset used comes from a CSV file  online, derived from the **Wisconsin Breast Cancer Dataset**. The model leverages machine learning to assist in early detection and diagnosis, which can be crucial for timely treatment.
 
+----------
+
+### **How the AI Model is Built**
+
+#### **1. Data Processing & Preprocessing**
+
+-   **Libraries Used:**  `pandas`, `numpy`, `seaborn`, `matplotlib`
+    
+-   **Dataset:** Loaded from a URL using `pandas.read_csv()`
+    
+-   **Feature Encoding:** The target variable (`diagnosis`) is converted into numerical values using `LabelEncoder`.
+    
+-   **Feature Scaling:** Standardization is applied using `StandardScaler()` to normalize feature values.
+    
+
+#### **2. Exploratory Data Analysis (EDA)**
+
+-   **Correlation Matrix:** Used to identify relationships between different features.
+    
+-   **Value Counts:** Checked the distribution of benign vs. malignant cases.
+    
+
+#### **3. Model Development**
+
+-   **Train-Test Split:** Data is split into training and testing sets using `train_test_split(test_size=0.2, random_state=12)`.
+    
+-   **Algorithm Used:**  `KNeighborsClassifier` (K-Nearest Neighbors)
+    
+-   **Parameter Selection:**  `n_neighbors=5` is used for KNN.
+    
+
+#### **4. Model Training & Evaluation**
+
+-   The KNN classifier is trained using the training data.
+    
+-   Model performance is evaluated using accuracy metrics.
 ![accuracy](https://github.com/user-attachments/assets/d1b771cf-44b1-4939-9de2-42f665a7a51a)
 ![loss](https://github.com/user-attachments/assets/2525c310-b210-44c8-af0f-84780b955430)
 
